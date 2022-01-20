@@ -4,7 +4,7 @@ import Server from "./server";
 
 Server.set("port", process.env.PORT);
 
-Server.listen(process.env.PORT, () => {
+Server.listen(Server.get("port"), () => {
   connectDb();
-  console.log("app Running");
+  console.log(`Application Running on Port ${Server.get("port")}`);
 });
