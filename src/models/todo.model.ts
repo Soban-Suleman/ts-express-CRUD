@@ -9,7 +9,7 @@ interface Todo {
 const TodoSchema: Schema = new Schema(
   {
     todo: String,
-    due: Date,
+    due: { type: Date, default: new Date() },
     completed: { type: Boolean, default: false },
   },
   { timestamps: true }
